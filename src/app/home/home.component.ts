@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // this.firstObsSubscription = interval(1000).subscribe(count => {
     //   console.log(count);
     // });
-    const customIntervalObservable = Observable.create((observer) => {
+    const customIntervalObservable = new Observable((observer) => {
       let count = 0;
       setInterval(() => {
         observer.next(count);
